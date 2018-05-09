@@ -1,6 +1,24 @@
 # JoyCon-Driver
 A vJoy feeder / Driver for the Nintendo Switch JoyCons and Pro Controller on Windows with analog stick support and motion controls
 
+## How to build
+### Build wxWidgets-3.0.3
+1. Download wxWidgets-3.0.3.7z sources here: https://github.com/wxWidgets/wxWidgets/releases/tag/v3.0.3
+2. Extract content somewhere (Example: C:\dev\c++\wx\3.0.3)
+3. Open C:\dev\c++\wx\3.0.3\build\msw\wx_vc11.sln with Visual Studio 2017 Community
+4. Visual Studio will prompt for an update of the source files. Choose update to vc141.
+5. After updating choose "Build > Build solution (F6)"
+
+### Include wxWidgets-3.0.3
+1. After building the project it can be included in the JoyCon-Driver project like this:
+2. Open the JoyCon-Driver project in Visual Studio
+3. Go to "Project > Properties"
+4. Click on C/C++
+6. Add C:\dev\c++\wx\3.0.3\include\msvc and C:\dev\c++\wx\3.0.3\include to the Additional Include Directories (in this order)
+7. Click on Linker
+8. Add C:\dev\c++\wx\3.0.3\lib\vc_lib to the Additional Library Directories
+9. wxWidgets-3.0.3 is now included in the project.
+
 ## How to use
 1. Install vJoy, here: http://vjoystick.sourceforge.net/site/
 
